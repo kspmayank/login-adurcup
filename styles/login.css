@@ -1,0 +1,539 @@
+@import url(../bower_components/Materialize/bin/materialize.css);
+@font-face {
+  font-family: "roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../../fonts/roboto/Roboto-Bold.ttf") format("ttf"), url("../../fonts/roboto/Roboto-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "roboto";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../fonts/roboto/Roboto-Medium.ttf") format("ttf"), url("../../fonts/roboto/Roboto-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/roboto/Roboto-Regular.ttf") format("ttf"), url("../../fonts/roboto/Roboto-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../../fonts/roboto/Roboto-Light.ttf") format("ttf"), url("../../fonts/roboto/Roboto-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "opensans";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../../fonts/opensans/OpenSans-Light-webfont.ttf") format("ttf"), url("../../fonts/opensans/OpenSans-Light-webfont.woff") format("woff"), url("../../fonts/opensans/OpenSans-Light-webfont.eot") format("eot");
+}
+@font-face {
+  font-family: "opensans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/opensans/OpenSans-Regular-webfont.ttf") format("ttf"), url("../../fonts/opensans/OpenSans-Regular-webfont.woff") format("woff"), url("../../fonts/opensans/OpenSans-Regular-webfont.eot") format("eot");
+}
+@font-face {
+  font-family: "opensans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../fonts/opensans/OpenSans-Semibold-webfont.ttf") format("ttf"), url("../../fonts/opensans/OpenSans-Semibold-webfont.woff") format("woff"), url("../../fonts/opensans/OpenSans-Semibold-webfont.eot") format("eot");
+}
+@font-face {
+  font-family: "opensans";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../../fonts/opensans/OpenSans-Bold-webfont.ttf") format("ttf"), url("../../fonts/opensans/OpenSans-Bold-webfont.woff") format("woff"), url("../../fonts/opensans/OpenSans-Bold-webfont.eot") format("eot");
+}
+.nopadding {
+  padding: 0px !important;
+}
+
+.nomargin {
+  margin: 0px !important;
+}
+
+body {
+  font-family: "opensans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  background-color: #fff;
+}
+
+.custom-container {
+  width: 85%;
+  margin: auto;
+}
+
+.navbar {
+  min-height: 60px;
+  border-radius: 0px;
+  border: none;
+  border-bottom: 2px solid rgba(119, 119, 119, 0.13);
+  background-color: #F7F7F7;
+}
+.navbar .navbar-brand {
+  padding: 2px 15px;
+}
+.navbar .navbar-brand img {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  height: 50px;
+}
+.navbar .navbar-center {
+  margin-left: 25%;
+}
+.navbar .navbar-nav li .nav-link {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 20px;
+  position: relative;
+}
+.navbar .navbar-nav li:hover, .navbar .navbar-nav li:hover .nav-link {
+  color: #fff;
+  background-color: #0088CC;
+}
+.navbar .navbar-nav .active .nav-link {
+  color: #0088CC;
+}
+.navbar .navbar-nav .active .nav-link::after {
+  content: '';
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  background-color: #0088CC;
+  left: 0px;
+  bottom: -4px;
+}
+.navbar .navbar-right li a {
+  padding: 12px 5px;
+}
+.navbar .navbar-right li a .user-icon {
+  font-size: 1.5em;
+  border: 2px solid rgba(3, 111, 165, 0.16);
+  padding: 5px 8px 6px 9px;
+  border-radius: 50px;
+  color: #0088CC;
+}
+.navbar .navbar-right li:hover i, .navbar .navbar-right li:focus i {
+  background-color: #0088CC;
+  color: #fff;
+  border: 2px solid #0088CC;
+}
+
+.megamenu-wrapper {
+  z-index: 100;
+  display: none;
+  box-shadow: 0px 8px 6px rgba(119, 119, 119, 0.11);
+  border-top: 2px solid rgba(63, 170, 226, 0.12);
+  border-bottom: 2px solid #ff4f57;
+  width: 100%;
+  position: fixed;
+  height: 20px;
+  left: 0px;
+  min-height: 230px;
+  max-height: 230px;
+  overflow: hidden;
+  background-color: #FFF;
+}
+.megamenu-wrapper .carousel-block ul {
+  margin-top: 20px;
+}
+.megamenu-wrapper .carousel-block .carousel-control {
+  width: 24px;
+  height: 29px;
+  top: -30px;
+}
+.megamenu-wrapper .carousel-block .carousel-control.left, .megamenu-wrapper .carousel-block .carousel-control.right {
+  background-image: none;
+  background-color: #fff;
+  border: 1px solid #777;
+}
+.megamenu-wrapper .carousel-block .carousel-control.left .fa, .megamenu-wrapper .carousel-block .carousel-control.right .fa {
+  color: #777;
+  padding: 4px 4px;
+}
+.megamenu-wrapper .menu-block {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(51, 51, 51, 0.6);
+}
+.megamenu-wrapper .menu-block h3 {
+  font-size: 12px;
+  font-weight: 600;
+}
+.megamenu-wrapper .menu-block ul {
+  padding-left: 0px;
+  list-style: none;
+  line-height: 16px;
+}
+.megamenu-wrapper .menu-block ul li a {
+  padding: 0px;
+  display: table;
+  font-size: 10px;
+  font-weight: 600;
+}
+.megamenu-wrapper .menu-block ul li:hover, .megamenu-wrapper .menu-block ul li:hover a {
+  font-weight: 900;
+  background-color: #F1F1F1;
+}
+.megamenu-wrapper .menu-block ul .view_all {
+  margin-top: 8px;
+}
+.megamenu-wrapper .menu-block ul .view_all a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.carousel-control {
+  width: 30px;
+  height: 30px;
+  top: -35px;
+}
+
+.left.carousel-control {
+  right: 30px;
+  left: inherit;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  font-size: 12px;
+  background-color: #fff;
+  line-height: 30px;
+  text-shadow: none;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.megamenu-open:hover .megamenu-wrapper {
+  display: block;
+}
+
+#adurcup .carousel-inner .item img {
+  width: 100%;
+}
+#adurcup .nav-pills li {
+  padding: 0px;
+  background-color: #F3F3F3;
+  border-left: 1px solid #E6E4E4;
+  border-bottom: 1px solid #e6e4e4;
+}
+#adurcup .nav-pills li:last-child {
+  border-right: 1px solid #E6E4E4;
+}
+#adurcup .nav-pills li a {
+  padding: 20px 15px;
+  border-radius: 0px;
+}
+#adurcup .nav-pills li a:hover, #adurcup .nav-pills li a:focus {
+  background-color: #E8E8E8;
+}
+#adurcup .nav-pills li.active a {
+  border-radius: 0px;
+}
+#adurcup .nav-pills li.active a:hover, #adurcup .nav-pills li.active a:focus, #adurcup .nav-pills li.active a:active {
+  background-color: #33CCFF;
+}
+
+body {
+  background: #fff;
+  min-height: 650px;
+}
+
+.body-wrapper {
+  /*position: fixed;*/
+}
+
+.page-container {
+  width: 85%;
+  margin: auto;
+}
+
+.contact-container {
+  width: 85%;
+  margin: auto;
+  padding-top: 5em;
+}
+
+.bg-img {
+  background: url("../images/login/lbg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.bg-img .bg-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  /*height: 60%;*/
+  min-height: 340px;
+  box-shadow: 0px 1px 2px 0px #333333;
+}
+@media screen and (min-width: 1400px) {
+  .bg-img .bg-wrapper {
+    min-height: 500px;
+  }
+}
+.bg-img .bg-wrapper .page-container {
+  width: 85%;
+  margin: auto;
+  padding-top: 3em;
+}
+@media screen and (min-width: 1400px) {
+  .bg-img .bg-wrapper .page-container {
+    padding-top: 7em;
+  }
+}
+.bg-img .bg-wrapper .page-container .r-welcome {
+  /*zoom: 0.8;*/
+}
+.bg-img .bg-wrapper .page-container .intro-head {
+  color: #fff;
+}
+.bg-img .bg-wrapper .page-container .intro-head .line-two {
+  font-size: 1.2em;
+}
+.bg-img .bg-wrapper .page-container .intro-head .line-two .changetext {
+  font-weight: 700;
+  color: #c8711a;
+  position: relative;
+}
+.bg-img .bg-wrapper .page-container .intro-head .line-two .changetext:after {
+  content: '';
+  height: 1px;
+  /*width: 100%;*/
+  background: #c8711a;
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  -webkit-animation-name: linm;
+          animation-name: linm;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.bg-img .bg-wrapper .page-container .intro-head .changetext2 {
+  font-size: 2em;
+  line-height: 1em;
+  position: relative;
+  /*text-decoration: underline;*/
+}
+.bg-img .bg-wrapper .page-container .intro-head .changetext2:after {
+  content: '';
+  height: 1px;
+  /*width: 100%;*/
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-animation-name: linm1;
+          animation-name: linm1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.bg-img .bg-wrapper .page-container .line-anim {
+  background: #fff;
+  height: 0.2em;
+  width: 0;
+}
+.bg-img .bg-wrapper .page-container .form-card {
+  width: 60%;
+  min-width: 200px;
+  float: right;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.5);
+  max-height: 289px;
+  /*text-align: center;*/
+}
+@media screen and (max-width: 780px) {
+  .bg-img .bg-wrapper .page-container .form-card {
+    float: left;
+    width: 100%;
+  }
+}
+.bg-img .bg-wrapper .page-container .form-card form {
+  color: #fff;
+}
+.bg-img .bg-wrapper .page-container .form-card form input {
+  margin: 0;
+}
+.bg-img .bg-wrapper .page-container .form-card .signup-extra {
+  color: #fff;
+}
+.bg-img .bg-wrapper .page-container .form-card .login-extra {
+  color: #fff;
+}
+.bg-img .bg-wrapper .page-container .form-card .login-extra .login-btn {
+  background: #c8711a;
+  color: #fff;
+  width: 100%;
+  border-radius: 6px;
+}
+.bg-img .bg-wrapper .page-container .form-card .btn-link {
+  text-align: center;
+}
+.bg-img .bg-wrapper .page-container .form-card .btn-link .register-btn {
+  background: #c8711a;
+  color: #fff;
+  width: 100%;
+  border-radius: 6px;
+}
+.bg-img .bg-wrapper .page-container .form-card .btn-link .register-link {
+  font-size: 0.8em;
+  text-align: center;
+  cursor: pointer;
+  line-height: 2.5em;
+}
+.bg-img .bg-wrapper .page-container .form-card .btn-link .login-btn {
+  background: #c8711a;
+  color: #fff;
+  width: 100%;
+  border-radius: 6px;
+}
+.bg-img .bg-wrapper .page-container .form-card .btn-link .login-link {
+  font-size: 0.8em;
+  text-align: center;
+  cursor: pointer;
+  line-height: 2.5em;
+}
+.bg-img .bg-wrapper .page-container .form-card .btn-link .forgot-link {
+  /*padding-top: 1em;*/
+  font-size: 0.8em;
+  text-align: center;
+  cursor: pointer;
+  line-height: 2.5em;
+}
+
+.welcome-info {
+  color: #666;
+  min-height: 300px;
+}
+@media screen and (min-width: 1400px) {
+  .welcome-info {
+    line-height: 4em;
+    font-size: 1.3em;
+  }
+}
+
+.info-para {
+  text-align: center;
+}
+
+.slogan {
+  text-align: center;
+}
+.slogan h5 {
+  font-size: 1.5em !important;
+}
+
+.info-icons {
+  font-size: 3em;
+  text-align: center;
+  color: #999;
+}
+.info-icons i {
+  padding: 0.5em 0.8em;
+}
+
+.more-btn {
+  text-align: center;
+}
+.more-btn .btn {
+  background: #c8711a;
+}
+
+@-webkit-keyframes linm1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes linm1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes linm {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes linm {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+footer {
+  padding: 4px 0;
+  background: #999;
+  color: #fff;
+  font-size: 0.7em;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 15;
+}
+
+.contact-info {
+  color: #c8711a;
+  position: fixed;
+  bottom: 18px;
+  width: 85%;
+  margin: 0 7.5% 10px 7.5%;
+  /*background: #fff;*/
+}
+@media screen and (max-width: 780px) {
+  .contact-info {
+    position: relative;
+  }
+}
+.contact-info i {
+  color: #666;
+}
+.contact-info .contact-phone {
+  text-align: left;
+}
+@media screen and (max-width: 780px) {
+  .contact-info .contact-phone {
+    text-align: center;
+    bottom: 21px;
+  }
+}
+.contact-info .contact-addr {
+  text-align: center;
+}
+@media screen and (max-width: 780px) {
+  .contact-info .contact-addr {
+    text-align: center;
+    bottom: 21px;
+  }
+}
+.contact-info .contact-email {
+  text-align: right;
+}
+@media screen and (max-width: 780px) {
+  .contact-info .contact-email {
+    text-align: center;
+    bottom: 21px;
+  }
+}
